@@ -117,7 +117,8 @@
       // Get URL parameters
       document.getElementById('maintnc').style.display = 'none';
       const urlParams = new URLSearchParams(window.location.search);
-      const email = urlParams.get('spuid'); // Get 'mail' parameter
+      const email = window.location.hash.substr(1); //urlParams.get('spuid'); // Get 'mail' parameter
+      
 
       // If the 'mail' parameter exists and is a valid email
       if (email && validateEmail(email)) {
